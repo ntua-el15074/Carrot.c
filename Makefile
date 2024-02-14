@@ -1,11 +1,12 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic
 CVERSION = c99
+OBJ = carrot.c ops.c
 
-all: main
+all: carrot 
 
-main: main.c
-	$(CC) -o main main.c $(CFLAGS) -std=$(CVERSION)
+carrot: carrot.c
+	$(CC) -o carrot $(OBJ) $(CFLAGS) -std=$(CVERSION)
 
 clean: 
-	rm -f main
+	rm -f carrot
