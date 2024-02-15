@@ -1,15 +1,16 @@
 #include <stdlib.h>
-// #include <errno.h>
 #include <unistd.h> 
-// #include <ctype.h>
-// #include <stdio.h>
 #include <termios.h>
 
-#include "carrot.h"
+#include "ops/ops.h"
+#include "editor/editor.h"
+#include "screen/screen.h"
 
-int main() {
+int main(void) {
 
-    clearScreen();
+    initEditor();
+
+    refreshScreen();
 
     EnableRaw();
     
