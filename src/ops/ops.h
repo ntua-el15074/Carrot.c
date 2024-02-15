@@ -7,8 +7,21 @@
 #define ENTER 13
 #define BACKSPACE 127
 
+enum keyPresses {
+    ARROW_UP = 1000,
+    ARROW_DOWN, 
+    ARROW_LEFT,
+    ARROW_RIGHT,
+    PAGE_UP,
+    PAGE_DOWN,
+    DELETE_KEY,
+    HOME_KEY,
+    END_KEY,
+};
+
 /* Key Operations */
-char readKey(void);
+void moveCursor(int key);
+int readKey(void);
 void keyOperations(void);
 int getCursor(int *rows, int *cols);
 

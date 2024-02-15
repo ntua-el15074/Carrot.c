@@ -3,6 +3,8 @@
 
 #include <termios.h>
 
+#define EDITOR_VERSION "0.0.1"
+
 struct conf {
     int cx, cy;
     int screenrows;
